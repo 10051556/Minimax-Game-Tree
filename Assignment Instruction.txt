@@ -1,0 +1,64 @@
+Game: 3-14
+ 
+Gameplay: 3-14 is a 2-player turn-based game. Initially there is a pile of 9 numbers: 0,1,2,3,4,5,6,7,8. Each player takes turn to choose a number from the pile. After a number is chosen, it will be removed from the pile and inserted into the player’s hand. The game ends when a player wins or when it is a draw game that the last number is chosen by the player who does not win.
+ 
+Winning Condition: A player wins the game if the player’s hand contains 3 numbers whose sum is 14.
+For example, if a player’s hand contains 1,4,8:
+	1	if the player chooses 2 from the pile (if available), then the player’s hand becomes 1,2,4,8, and the player would win the game because 2+4+8=14
+	2	if the player chooses 5 from the pile (if available), then the player’s hand becomes 1,4,5,8, and the player still would win the game because 1+5+8=14
+	3	however, if the player chooses 6 from the pile (if available), then the player’s hand becomes 1,4,6,8, but the player would not win because all possible sums of 3 numbers are not equal to 14 (1+4+6=11, 1+4+8=13, 1+6+8=15, 4+6+8=18). The fact that 6+8=14 is irrelevant because the sum must be obtained from exactly 3 numbers.
+ 
+To Do: Write a program that
+	•	reads some input data indicating the status of a game
+	•	contains an AI algorithm to make a move for the current player by choosing a number from the pile and try to achieve the winning condition
+	•	output the updated status of the game
+ 
+Input: The input should be read from the standard input stream that contains a sequence of numbers separated by space. The first number indicates how many moves have been made by the 2 players in total. The subsequent numbers represent the moves, i.e., the numbers that have been chosen by the 2 players. The following shows an example input:
+4 5 2 6 3
+In the above example, 4 moves have been made. Player 1 first chooses 5 from the pile; player 2 chooses 2; player 1 chooses 6; player 2 chooses 3. This means that player 1’s hand becomes 5, 6 and player 2’s hand becomes 2,3. The remaining numbers in the pile are thus 0,1,4,7,8. It is player 1’s turn. So given this input text file, your program should choose a number from 0,1,4,7,8 for player 1.
+For a new game, there was no previous move. So the input just contains a single number 0.
+ 
+Output: The output should have the exact format as the input, i.e., it should contain a sequence of numbers where the first number indicates how many moves have been made by the 2 players after you make the move. The subsequent numbers represent the moves that have been chosen by the players, with the last number indicating your move. For example, if you are given the above input and your program chooses 7 from the pile as your move, then the output should be shown as follows:
+5 5 2 6 3 7
+The output should be produced as the standard output stream.
+ 
+Time Limit: Your program should generate the output within 2 minutes on any machine that runs your program.
+ 
+Programming Language: You can write your program in either Python or C++.
+Specifications for writing code in Python
+If you would like to write the code in Python, then your code should be included in a file named as 12345678a1.py, where 12345678 should be replaced with your own student number. Your code should be able to run in a Windows command-line:
+python 12345678a1.py [input]
+where [input] is the same format as described on last page, e.g., running the following line
+python 12345678a1.py 4 5 2 6 3
+should give the input to your program about the current game board status (4 moves have been made; {5,6} already chosen by player 1; {2,3} already chosen by player 2).
+Your program should then make a move and produce the output as describe on last page, which should be printed to the standard output stream. For example, if your program chooses 7 as your move, then the following output should be printed by your program:
+5 5 2 6 3 7
+ 
+A sample Python code is provided. It will try to choose the first available number from the pile.
+ 
+Specifications for writing code in C++
+If you would like to write the code in C++, then your code should be included in a file named as 12345678a1.cpp, where 12345678 should be replaced with your own student number. After compiling the code, an executable program 12345678a1.exe should be obtained. This executable file should be able to run in a Windows command-line:
+12345678a1 [input]
+where [input] is the same format as described on last page, e.g., running the following line
+12345678a1 4 5 2 6 3
+should give the input to your program about the current game board status (4 moves have been made; {5,6} already chosen by player 1; {2,3} already chosen by player 2).
+Your program should then make a move and produce the output as describe on last page, which should be printed to the standard output stream. For example, if your program chooses 7 as your move, then the following output should be printed by your program:
+5 5 2 6 3 7
+ 
+A sample C++ code is provided. It will try to choose the first available number from the pile.
+ 
+Submission Guidelines: Follow the steps below in preparing your files to be submitted. In the followings, 12345678 denotes your own student number and you should use your own student number in the file names.
+	1	Create a folder named as your student ID number. For example, if your student ID is 12345678, then create a folder named 12345678.
+	2	Put all your source files under the folder created in 1).
+	◦	If you are writing the code in Python, then include the file py
+	◦	If you are writing the code in C++, then include the file cpp and an executable file 12345678a1.exe that can be run on a Windows command-line.
+	3	Include a Word file doc or 12345678.docx that describes your AI algorithm.
+	4	Zip up the folder in 1) and submit the zip file here
+	5	After submission, you should download the zip file back preferably on another machine to double check that it is working properly, by
+	◦	Unzipping it to check that it can be unzipped and all the required files are contained in the folder with proper file names
+	◦	If you are submitting Python code, then run it on a command line with some test input to make sure that it gives an output with the proper format as described in the above section
+	◦	If you are submitting C++ code, then first compile it to make sure that it can produce an executable file (even if you should submit the executable file as well). Then run the executable file on a command line with some test input to make sure that it gives an output with the proper format as described in the above section
+ 
+Deadline: You should submit your Assignment 1 by Wednesday 24 March 2021. The teaching team may refuse to mark your assignment or impose a heavy penalty if you submit it after the deadline (according to the submission time on the Canvas course page).
+ 
+Questions: You can check out this Discussion for any issues other students have raised regarding this assignment. If you have a question and find that it has not yet been posted before, then you can post a new question there.
